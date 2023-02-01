@@ -4,12 +4,32 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+const 초기값 :{count: number} = { count: 0 };
+
+function reducer(state = 초기값, action:{type: string}){
+  if(action.type === "증가"){
+    return {...state, count : state.count + 1}
+  } else if (action.type === "감소"){
+    return { ...state, count: state.count - 1}
+  } else {
+    return 초기값
+  }
+}
+const store = createStore(reducer);
+
+export type RootState = ReturnType<typeof store.getState>
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
