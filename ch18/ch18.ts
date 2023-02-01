@@ -5,7 +5,7 @@ import { Car, Bike, No } from "./a";
 console.log(이름);
 console.log(나이);
 
-let 변수: 네임스페이스.Name = 'park';
+// let 변수: 네임스페이스.Name = 'park';
 // import export 전에는 레페런스로 대신해서 사용했다.
 
 // 숙제1

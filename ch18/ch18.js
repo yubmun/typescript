@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var a_1 = require("./a");
 console.log(a_1.이름);
 console.log(a_1.나이);
-var 변수 = 'park';
+// let 변수: 네임스페이스.Name = 'park';
 // import export 전에는 레페런스로 대신해서 사용했다.
 // 숙제1
 var 숙제변수 = {
