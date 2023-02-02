@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "typeRoots": ["./types"],
+    // 여기있는 타입들은 글로벌하게 처리해달라는 의미
+  }
+}
