@@ -20,9 +20,9 @@ function 숙제1(x:(number | string)[]){
   let result: number[] = [];
   for(let i=0; i < x.length; i++){
     if(typeof x[i] === "string"){
-      result.push(parseFloat(x[i]));
+      result.push(parseFloat(x[i] as string));
     } else {
-      result.push(x[i]);
+      result.push(x[i] as number);
     }
   }
   return result;
