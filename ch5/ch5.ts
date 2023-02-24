@@ -15,11 +15,29 @@ function 내함수2(x:string|number){
 }
 
 // 숙제1
+// for 를 사용했을 때, forEach() 를 썼을 때 parseInt, parseFloat 사용되지 않는 이유?
 function 숙제1(x:(number | string)[]){
   let result: number[] = [];
   for(let i=0; i < x.length; i++){
-    result.push(Number(x[i]));
+    if(typeof x[i] === "string"){
+      result.push(parseFloat(x[i]));
+    } else {
+      result.push(x[i]);
+    }
   }
+  return result;
+}
+
+function 숙제3(x: (number | string)[]){
+  let result: number[] = [];
+
+  x.forEach((b) => {
+    if(typeof b === "string"){
+      result.push(parseFloat(b));
+    } else {
+      result.push(b);
+    }
+  })
   return result;
 }
 
