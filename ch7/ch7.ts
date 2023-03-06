@@ -14,6 +14,34 @@ function 함수(a: "hello", b: 123) :1|0{
   return 1;
 }
 
+// 문제
+function hw_1(a: "가위"|"바위"|"보"): ("가위" | "바위" | "보")[]{
+  return [a];
+}
+
+var data = {
+  name: "kim"
+}
+
+function myF(a: "kim"){
+
+}
+// myF(data.name);
+// kim 이라는 자료만 들어올수 있습니다가 아니고, kim 이라는  타입만 들어올 수 있다는 의미, object 타입을 제대로 지정해서 쓰든지, assertion 문법으로 as 키워드 써서 해결하든지, as const 라는 키워드를 써도 됨
+
+/**
+ * var data = {
+ *  name : "kim"
+ * } as const
+ * 
+ * as const ??
+ * 1. objecet value 값을 그대로 타입으로 지정해준다.
+ * 2. objcet 속성들에 모두 readonly 를 붙여준다.
+ * 
+ * as const 를 쓰면 myF(data.name) 이 에러가 안난다.
+ */
+
+
 // 문제 1. 가위,바위,보라는 문자만 입력할 수 있고, 가위,바위,보 만 들어올 수 있는 array를 return 해야함
 function 문제1(x: "가위"|"바위"|"보") :("가위"|"바위"|"보")[]{
   return [x];
