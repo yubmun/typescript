@@ -10,4 +10,12 @@ var 여친2 = {
     name: "엠버"
 };
 var position = { x: 10, y: 20 };
+// 숙제 3 옳은 속성인지 검사하는 type alias를 만들어라 
+var sample = { name: "kim", phone: 123, email: 'abc@naver.com' };
+var sample2 = {
+    name: "kim",
+    phone: 123,
+    email: "dlwnsduq23@gmail.com",
+    adult: true,
+};
 var sign = { name: "kim", phone: 123, email: "dlwnsduq", adult: true };

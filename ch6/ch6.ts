@@ -26,6 +26,7 @@ const 여친2: Girlfriend = {
   name: "엠버"
 }
 // 여친2.name = "유라"; 바꿀 때 에러가 난다
+// 타입스크립트에서 에러는 에디터 & 터미널에서만 존재하고, js 파일에서는 변경이 된다.
 
 type Name = string;
 type Age = number;
@@ -37,7 +38,38 @@ type PositionY = { y: number };
 // 같은 이름의 type은 재정의가 불가능하다. 
 type NewType = PositionX & PositionY;
 
-let position: NewType = { x: 10, y: 20};
+let position: NewType = { x: 10, y: 20 };
+
+// 숙제 1 object타입을 정의한 type alias 두개를 & 기호로 합칠때 중복된 속성이 있다면?
+type Junyub = { x: number };
+type Lee = { x: string };
+
+type LeeJunyub = Junyub & Lee;
+
+// const hw_1: LeeJunyub = {x: 123}; 두 프로퍼티가 합쳐지니깐 never타입이라는걸로 설정이 되네
+
+// 숙제2 조건에 만족하는 타입 만들기
+type hw_2 = {
+  color?: string,
+  size: number,
+  readonly position: number[];
+}
+
+// 숙제 3 옳은 속성인지 검사하는 type alias를 만들어라 
+const sample = { name: "kim", phone: 123, email: 'abc@naver.com' };
+
+type hw_3 = { name: string, phone: number, email: string};
+
+// 숙제 4 조건에 맞는 type alias
+type hw_4 = hw_3 & { adult: boolean };
+
+const sample2:hw_4 = {
+  name: "kim",
+  phone: 123,
+  email: "dlwnsduq23@gmail.com",
+  adult: true,
+}
+
 
 //숙제 1
 type ObjectType1 = { x: number, y: number }
