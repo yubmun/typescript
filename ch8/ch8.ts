@@ -52,6 +52,9 @@ let 회원정보1:Member = {
   }
 }
 
+// 숙제1
+const 멤버:{} = {}
+
 // 숙제2
 type 숙제2 = (a:string) => string;
 type 숙제21 = (a:string) => number;

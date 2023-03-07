@@ -23,6 +23,8 @@ let 회원정보1 = {
         console.log("안녕");
     }
 };
+// 숙제1
+const 멤버 = {};
 let cutZero = (a) => {
     if (a[0] === "0") {
         return a.replace(/^0+/, "");
