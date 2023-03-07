@@ -72,6 +72,7 @@ let removeDash:숙제21 = (a) => {
 }
 console.log(removeDash("941103-1313132"));
 
+
 // 숙제3
 type 숙제3 = (a: string, b:숙제2, c:숙제21) => void
 let 만들함수:숙제3 = (a:string, b=cutZero, c=removeDash ) => {

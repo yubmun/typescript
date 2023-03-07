@@ -23,10 +23,10 @@ var data = {
   name: "kim"
 }
 
-function myF(a: "kim"){
+function myF(a: string){
 
 }
-// myF(data.name);
+myF(data.name);
 // kim 이라는 자료만 들어올수 있습니다가 아니고, kim 이라는  타입만 들어올 수 있다는 의미, object 타입을 제대로 지정해서 쓰든지, assertion 문법으로 as 키워드 써서 해결하든지, as const 라는 키워드를 써도 됨
 
 /**
