@@ -8,7 +8,7 @@ if(제목 !== null){
   제목.innerHTML = "반가워요";
 }
 
-// 왼쪽에 있는 제목이라는애가 Element의 인스턴스냐? 라는 의미
+// 왼쪽에 있는 제목이라는애가 Element의 인스턴스냐? 라는 의미, 가장 많이 쓰인다.
 if(제목 instanceof Element){
   제목.innerHTML = "반가워요";
 }
@@ -16,7 +16,7 @@ if(제목 instanceof Element){
 // let 제목 = document.querySelector("#title") as Element; 써주면 null이어도 무조건 Element로 처리됨
 // as Element는 최후의 수단으로 쓰자
 
-// 옵셔널 체이닝 ? 써서 쓸 수 있음
+// 옵셔널 체이닝 ? 써서 쓸 수 있음, 제목에 innerHTML이 있으면 출력해주고, 없으면 undefined를 뱉으라는 의미이다.
 if(제목?.innerHTML){
   제목.innerHTML = "반가워요";
 }
@@ -36,9 +36,26 @@ if(링크 instanceof HTMLAnchorElement){
 
 let 버튼 = document.querySelector("#button");
 // ? 는 옵셔널 체이닝으로 narrowing 처럼 쓸 수 있음
+// 버튼 에 addEventListener 달수있으면 달고, 안되면 undefined 뱉어주세요. 라는 의미
 버튼?.addEventListener("click", function(){
 
 })
+
+// 숙제 1 html 안에 있는 test.jpg를 보여주고 있는 이미지 태그가 있다고 가정하고, new.jpg 파일로 바꾸고 싶다면?
+let image = document.querySelector("#image");
+if(image instanceof HTMLImageElement){
+  image.src = "new.jpg"
+}
+
+// 숙제 2 세개의 a 태그, href 속성을 전부 https://kakao.com 으로 바꾸고싶다면?
+let threeA = document.querySelectorAll(".naver");
+
+threeA.forEach((x) => {
+  if(x instanceof HTMLAnchorElement){
+    x.href = "https://kakao.com"
+  }
+})
+
 
 // 숙제1
 let 이미지 = document.querySelector("#image");
