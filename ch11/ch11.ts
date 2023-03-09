@@ -15,6 +15,50 @@ class Person1 {
 let 사람1 = new Person1("kim");
 let 사람2 = new Person1("park");
 // 사람1.data 필드값 따라 0이 나옴
+// 사람2.함수("안녕"); 
+
+/**
+ * 숙제 1 Car 클래스를 만들어보자
+ */
+class Cars{
+  model: string;
+  price: number;
+
+  constructor(a: string, b: number){
+    this.model = a;
+    this.price = b;
+  }
+  tax() :number{
+    return this.price / 10;
+  }
+}
+let variable = new Cars("소나타", 3000);
+
+/**
+ * 숙제2
+ */
+
+class Words{
+  num: number[];
+  str: string[];
+
+  constructor(...param: (string | number)[]){
+    let strArr: string[] = [];
+    let numArr: number[] = [];
+
+    param.forEach((x) => {
+      if(typeof x === "string"){
+        strArr.push(x);
+      } else if (typeof x === "number"){
+        numArr.push(x);
+      }
+    })
+    this.num = numArr;
+    this.str = strArr;
+  }
+}
+let test1 = new Words('kim', 3, 5, "park");
+
 
 // 숙제 1
 class Car {

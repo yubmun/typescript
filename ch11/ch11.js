@@ -13,6 +13,46 @@ var Person1 = /** @class */ (function () {
 var 사람1 = new Person1("kim");
 var 사람2 = new Person1("park");
 // 사람1.data 필드값 따라 0이 나옴
+// 사람2.함수("안녕"); 
+/**
+ * 숙제 1 Car 클래스를 만들어보자
+ */
+var Cars = /** @class */ (function () {
+    function Cars(a, b) {
+        this.model = a;
+        this.price = b;
+    }
+    Cars.prototype.tax = function () {
+        return this.price / 10;
+    };
+    return Cars;
+}());
+var variable = new Cars("소나타", 3000);
+/**
+ * 숙제2
+ */
+var Words = /** @class */ (function () {
+    function Words() {
+        var param = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            param[_i] = arguments[_i];
+        }
+        var strArr = [];
+        var numArr = [];
+        param.forEach(function (x) {
+            if (typeof x === "string") {
+                strArr.push(x);
+            }
+            else if (typeof x === "number") {
+                numArr.push(x);
+            }
+        });
+        this.num = numArr;
+        this.str = strArr;
+    }
+    return Words;
+}());
+var test1 = new Words('kim', 3, 5, "park");
 // 숙제 1
 var Car = /** @class */ (function () {
     function Car(a, b) {
