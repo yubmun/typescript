@@ -1,6 +1,27 @@
 // 파라미터로 spread 문법이 들어온다 ...rest parameter 라고 부른다
 // 이렇게 쓰면 파라미터가 100만개가 되어도 가능.
 
+/**
+ * 파라미터가 몇개나 들어올지 모를때, rest parameter를 사용한다.
+ * function 함수 (...a){ // 다른 파라미터가 있으면, 가장 마지막에 ...a 를 써줘야 된다.
+ * 
+ * }
+ * 
+ * 이렇게 rest parameter로 들어오는 데이터는 전부 배열에 담아준다.
+ * 때문에, 
+ * function 함수 (...a){
+ *   console.log(a);
+ * }
+ * 
+ * 함수(1,5,3,5,6,6); 실행하면
+ * [1,5,3,5,6,6]이 콘솔에 찍힌다.
+ * 
+ * rest parameter 타입지정은 어떻게?
+ * function 함수(...a: number[]){ // rest parameter는 데이터가 배열로 들어오니깐, 배열 타입지정하듯이 해줘야 한다.
+ *  
+ * }
+ */
+
 function 함수(...a: number[]){
   console.log(a);
 }

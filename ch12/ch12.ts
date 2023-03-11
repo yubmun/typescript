@@ -40,6 +40,16 @@ interface School {
  * string 타입도 만족하고 number 타입도 만족하는 타입은, 없기 때문에 never 타입으로 설정된다.
  */
 
+interface Jun {
+  age: number;
+}
+
+interface Yub {
+  age: string;
+}
+
+let 내나이는: Jun & Yub = {age : 50}
+
 interface hw_1 {
   brand: string;
   serialNumber: number;
