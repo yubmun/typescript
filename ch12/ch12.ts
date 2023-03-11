@@ -11,6 +11,68 @@ let 네모 :square = {
   width: 100,
 }
 
+// 깜짝 퀴즈
+let 학생1: School = { name: "kim" }
+let 선생1: School = { name: "kim", age: 20 }
+
+interface School {
+  name: string;
+  age?: number;
+}
+/**
+ * interface, type alias 중 왜 interface를 쓰는가?
+ * extends가 가능하기에 그렇다. 상속이 가능하다.
+ * 물론 type alias도 가능하다. & 연산자로! 전문용어로 intersection type 이라고 함.
+ * type Animal = { name: string }
+ * type Cat = { age: number } & Animal
+ * 단, 복사한다기보단 두 타입을 전부 만족하는 타입이라는 뜻이다.
+ * interface도 & 연산자를 써서 합칠 수 있다.
+ * 
+ * type vs interface
+ * interface는 중복 선언이 가능하다. (같은 이름으로 선언이 가능함 type alias은 안됨)
+ * 중복선언을 하면 interface에서 먼저 선언한것과 뒤에 선언한게 합쳐진다. 자동으로 extends가 된다고 보면 됨.
+ * 
+ * interface가 추후에 추가, 수정, 상속 관련해서 작업이 더 수월하기 때문에 라이브러리에서 interface가 아주 많다.
+ * 선택하기 나름이지만, interface 쓰는게 더 편리할 것 같다.
+ * 
+ * extends 할때 중복 속성이 발생하게 되면, 컴파일 에러로 잡아주기에 바로잡을 수 있음.
+ * 근데, & 연산자로 합쳐졌을때는? 컴파일에러가 안나서 바로잡아주지 않으며, 중복속성의 타입이 never가 됨.
+ * string 타입도 만족하고 number 타입도 만족하는 타입은, 없기 때문에 never 타입으로 설정된다.
+ */
+
+interface hw_1 {
+  brand: string;
+  serialNumber: number;
+  model: string[];
+}
+
+interface hw_2 {
+  product: string,
+  price: number
+}
+
+let cart3: hw_2[] = [{product: "청소기", price: 7000}, {product: "삼다수", price: 800}]
+
+interface hw_3 extends hw_2{
+  card: false;
+}
+
+interface hw_4 {
+  plus: (a: number, b: number) => number;
+  minus: (a: number, b: number) => number;
+}
+
+let fourQ: hw_4 = {
+  plus(a, b){
+    return a + b
+  },
+  minus(a, b){
+    return a - b
+  }
+}
+
+
+
 // interface도 앞글자는 대문자로 처리한다.
 interface Student{
   name: string

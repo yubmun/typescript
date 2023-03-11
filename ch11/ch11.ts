@@ -1,3 +1,11 @@
+class Student{
+  age: number;
+
+  constructor(a: number){
+    this.age = a;
+  }
+}
+
 
 class Person1 {
   // 필드 값을 써야 constructor에 추가할 수 있음, js에서는 안써도 가능함
