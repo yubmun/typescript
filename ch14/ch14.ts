@@ -40,3 +40,9 @@ function 함수_2(x: Car1 | Bike){
 
 // 논리적으로 이 타입인지 특정지을 수 있으면 narrowing으로 인정한다.
 
+type Jun = { age: number }
+type Yub = { age: string }
+
+type JunYub = Jun & Yub;
+
+let yubmun: JunYub = { age: 10 }
