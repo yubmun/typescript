@@ -26,7 +26,7 @@ let 준엽이 = new Yubmun("준엽");
 class Person_1{
   constructor(public name:string){
     // 생성자의 파라미터 앞에 public 키워드 붙이면 필드값으로 미리 선언 안해도 됨, 축약가능
-    this.name = name;
+    // this.name = name; 도 생략할 수 있다.
   }
 }
 let 자식 = new Person_1("사람")

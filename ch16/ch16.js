@@ -17,7 +17,7 @@ var Person_1 = /** @class */ (function () {
     function Person_1(name) {
         this.name = name;
         // 생성자의 파라미터 앞에 public 키워드 붙이면 필드값으로 미리 선언 안해도 됨, 축약가능
-        this.name = name;
+        // this.name = name; 도 생략할 수 있다.
     }
     return Person_1;
 }());
