@@ -25,6 +25,40 @@ class NewUser extends User {
  * private : extends된 class는 사용 불가능, 자식들 사용 불가능
 */
 
+/**
+
+(숙제2) x 속성에 숫자를 더해주는 함수가 필요합니다.
+
+class User {
+  private static x = 10;
+  public static y = 20;
+}
+User.addOne(3) //이렇게 하면 x가 3 더해져야함
+User.addOne(4) //이렇게 하면 x가 4 더해져야함
+User.printX()  //이렇게 하면 콘솔창에 x값이 출력되어야함
+저렇게 User.addOne() 쓸 때마다 x가 증가하는 함수는 어떻게 만들 수 있을까요? 
+
+그리고 x값을 콘솔창에 출력해주는 printX() 함수도 한번 만들어보십시오.
+
+(조건) private static x = 10; 이 코드 수정금지 
+ */
+
+class User_1 {
+  private static x = 10;
+  public static y = 20;
+
+  public addOne(a: number){
+    User_1.x = User_1.x + a;
+  }
+  public printX(){
+    console.log(User_1.x);
+  }
+}
+
+let junyub = new User_1();
+junyub.addOne(4);
+junyub.addOne(3);
+junyub.printX();
 // 숙제 1
 class Hw_1{
   private static x = 10;
@@ -49,9 +83,46 @@ class Hw_2{
     console.log(Hw_2.x);
   }
 }
-Hw_2.addOne(3); // 이렇게 하면 x가 3 더해져야 함
-Hw_2.addOne(4); // 이렇게 하면 x가 4 더해져야 함
-Hw_2.printX(); // 콘솔창에 x 값이 출력되어야 함
+// Hw_2.addOne(3); // 이렇게 하면 x가 3 더해져야 함
+// Hw_2.addOne(4); // 이렇게 하면 x가 4 더해져야 함
+// Hw_2.printX(); // 콘솔창에 x 값이 출력되어야 함
+
+/**
+ * 숙제3) 이런거 어떻게 만들게요 
+
+웹 요소 애니메이팅하는거 이런 것의 기초 격인데 
+
+let 네모 = new Square(30, 30, 'red');
+네모.draw()
+네모.draw()
+네모.draw()
+네모.draw()
+이렇게 네모.draw()를 할 때마다
+
+index.html에 가로 30px, 세로 30px, 배경색이 'red' 의 <div> 박스가
+
+가로 400px 세로 400px 공간 안에 무작위로 배치되어야합니다.
+ */
+
+class Square_1{
+  width: number;
+  height: number;
+  color: string;
+
+  constructor(width: number, height: number, color:string){
+    this.width = width;
+    this.height = height;
+    this.color = color;
+  }
+  draw(){
+    let square = document.createElement("div");
+    square.style.width = `${this.width}px`;
+    square.style.height = `${this.height}px`;
+    square.style.color = `${this.color}`;
+  }
+}
+let 네모 = new Square_1(30, 30, 'red');
+네모.draw();
 
 //숙제3
 class Square{

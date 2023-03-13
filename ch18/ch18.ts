@@ -22,6 +22,25 @@ let 함수:No = () => {
   console.log("Hello World!");
 }
 
+/**
+ * (숙제3) 타입 중복이 너무 많이 발생합니다.
+type Dog = string;
+interface Dog { name : string };
+
+let dog1 :Dog = 'bark';
+let dog2 :Dog = { name : 'paw' }
+위 코드에서 에러를 없애야합니다. 어떻게 코드를 짜면 될까요? 
+
+(조건) type Dog, interface Dog의 타입이름 변경 금지, 파일 분할 금지 
+ */
+
+namespace 하하 {
+  export interface Dog { name: string };
+}
+type Dog = string;
+let dog3 :Dog = 'bark';
+let dog4 :하하.Dog = { name: 'paw' };
+
 // 숙제3
 namespace GoodDog{
   export type Dog = string;
