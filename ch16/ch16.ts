@@ -31,3 +31,26 @@ class Person_1{
 }
 let 자식 = new Person_1("사람")
 console.log(자식);
+
+// class Junyub {
+//   constructor(protected name: string, protected age: number){
+
+//   }  
+// }
+
+// class Lee extends Junyub {
+  
+//   func(){
+//     return this.name = "준엽"
+//   }
+// }
+// let few = new Lee("이", 30);
+// console.log(few.func());
+
+class Junyub {
+  static name1: string = "준엽";
+}
+
+let 가나 = new Junyub();
+가나.name1 // 없는 값.
+Junyub.name1 // "준엽"

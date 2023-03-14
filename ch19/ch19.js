@@ -21,13 +21,11 @@ var e = 함수4(['100']);
 function 숙제1(x) {
     return x.length;
 }
-console.log(숙제1("hello"));
-console.log(숙제1(["kim", "park"]));
 var data = '{"name" : "dog", "age": 1}';
 function 숙제2(x) {
     return JSON.parse(x);
 }
-console.log(숙제2(data));
+// console.log(숙제2<Animal>(data));
 // 숙제3
 var Person = /** @class */ (function () {
     function Person(a) {
@@ -37,3 +35,35 @@ var Person = /** @class */ (function () {
 }());
 var 준엽 = new Person('어쩌구');
 var 이엽 = new Person(["어쩌구", "저쩌구"]);
+function hw_1(a) {
+    return a.length;
+}
+console.log(hw_1("hellokkk"));
+console.log(hw_1(["kim", "park"]));
+var data2 = '{"name" : "dog", "age" : 1 }';
+function hw_2(a) {
+    return JSON.parse(a);
+}
+console.log(hw_2(data2));
+/**
+ * class Person {
+  name;
+  constructor(a){
+    this.name = a;
+  }
+}
+let a = new Person('어쩌구');
+a.name
+ */
+var hw_3 = /** @class */ (function () {
+    function hw_3(a) {
+        this.name = a;
+    }
+    return hw_3;
+}());
+var cc = new hw_3("hello");
+console.log(cc.name);
+var dd = new hw_3(["heelo", "bye"]);
+console.log(dd.name);
+var ee = new hw_3(123);
+console.log(ee.name);
