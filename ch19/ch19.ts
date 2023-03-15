@@ -139,3 +139,15 @@ let dd = new hw_3<string[]>(["heelo", "bye"]);
 console.log(dd.name);
 let ee = new hw_3<number>(123);
 console.log(ee.name);
+
+
+interface MyType {
+  length: number;
+}
+
+function junyub<T extends MyType> (a: MyType) :number {
+  return a.length;
+}
+
+let result = junyub<string>("가나다");
+let result2 = junyub<number[]>([1,2,3]); // error
