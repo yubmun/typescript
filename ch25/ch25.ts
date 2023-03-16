@@ -38,6 +38,45 @@ interface MyType2{
 
 // 쓸일은 많이 없다.
 
+/**
+ * let obj = {
+  model : 'k5',
+  brand : 'kia',
+  price : 6000,
+  year : 2030,
+  date : '6월',
+  percent : '5%',
+  dealer : '김차장',
+}
+ */
+interface hw1{
+  [key: string]: string | number;
+}
+let obj1: hw1 = {
+  model : 'k5',
+  brand : 'kia',
+  price : 6000,
+  year : 2030,
+  date : '6월',
+  percent : '5%',
+  dealer : '김차장',
+}
+
+//숙제 2
+interface hw2{
+  [key: string]: hw2 | number;
+}
+
+let obj3: hw2 = {
+  'font-size' : 10,
+  'secondary' : {
+    'font-size' : 12,
+    'third' : {
+      'font-size' : 14
+    }
+  }
+}
+
 //숙제1
 interface Hw1{
   [key: string]: string|number
